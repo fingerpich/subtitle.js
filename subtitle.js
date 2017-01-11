@@ -13,8 +13,7 @@
  * Module dependencies.
  */
 
-var toMS = require('./lib/toMS')
-var toSrtTime = require('./lib/toSrtTime')
+var utils = require('./lib/utils')
 var parse = require('./lib/parse')
 var stringify = require('./lib/stringify')
 var resync = require('./lib/resync')
@@ -119,7 +118,7 @@ fn.resync = function _resync (time) {
  * @param {String} SRT time format
  */
 
-Subtitle.toMS = toMS
+Subtitle.toMS = utils.toMS
 
 /**
  * Convert milliseconds to SRT time format
@@ -128,4 +127,4 @@ Subtitle.toMS = toMS
  * @param {Integer} Milleseconds
  */
 
-Subtitle.toSrtTime = toSrtTime
+Subtitle.toSrtTime = utils.toSrtTime
